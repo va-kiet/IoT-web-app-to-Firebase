@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Air Conditioner</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body>
+        <div class="container" style="background-color:aqua;height: 400px;">
+            <div class="temp-header">
+                <h2>Temperature Adjustment</h2>
+                <button id="back-button" onclick="back()" style="cursor: pointer;">Back</button>
+            </div>
+            <img src="/img/ac.png" alt="" id="ac-img">
+            <div class="sliders">
+                <div class="temp-slider">
+                    <label for="ac-temperature">Temperature:</label>
+                    <input type="range" id="ac-temperature" min="16" max="30" value="16" onclick="adjTemp()">
+                    <span id="temperature-value">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+        <script src="/scripts/temp.js"></script>
+    </body>
+</html>
