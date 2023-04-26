@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RGB Color</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <div class="container" style="background-color:wheat;height: 500px;">
+            <div class="temp-header" style="height:12%">
+                <h2>RGB Color Adjustment</h2>
+                <button id="back-button" onclick="back()" style="cursor: pointer;">Back</button>
+            </div>
+            <div class="color">
+                <h2>Color</h2>
+                <div id="color"></div>
+            </div>
+            <img src="./img/rgb-lamp.png" alt="" id="rgb-img">
+            <div class="rgb-sliders">
+                <div class="element-slider">
+                    <label for="red">Red:</label>
+                    <input class="rgb" type="range" id="red" min="0" max="255" value="0" onclick="changeRGB()">
+                    <span class="slider-value" id="red-value">255</span>
+                </div>
+                <div class="element-slider">
+                    <label for="green">Green:</label>
+                    <input class="rgb" type="range" id="green" min="0" max="255" value="0" onclick="changeRGB()">
+                    <span class="slider-value" id="green-value">255</span>
+                </div>
+                <div class="element-slider">
+                    <label for="blue">Blue:</label>
+                    <input class="rgb" type="range" id="blue" min="0" max="255" value="0" onclick="changeRGB()">
+                    <span class="slider-value" id="blue-value">255</span>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+        <script src="./scripts/rgb.js"></script>
+    </body>
+</html>
